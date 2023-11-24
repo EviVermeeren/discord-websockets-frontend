@@ -7,7 +7,7 @@ let messages = ref([]);
 let socket = null;
 
 onMounted(() => {
-  socket = new WebSocket("ws://localhost:3000/primus");
+  socket = new WebSocket("ws://discord-websockets-backend.onrender.com/primus");
 
   socket.onmessage = (event) => {
     let newMessage = JSON.parse(event.data);
